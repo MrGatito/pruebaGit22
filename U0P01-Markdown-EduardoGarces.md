@@ -8,7 +8,7 @@ Es duro el hecho de trabajar más de 8 horas seguidas, llegando incluso a 15, pe
   2. ​`Los tokens(dinero virtual) también son de gran valor ya que puedes vendérselo a alguna persona por dinero real o gastartelo en algo de comer o beber para posteriormente comertelo a caraperro.`	
   3. ​`Tambien puedes encontrarte paquetes de tabaco y muchos más cosas cada cual más rara.`
 
-
+cositas de la practica 5
 Bloque en java:
 
 ```java
