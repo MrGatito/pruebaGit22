@@ -42,7 +42,7 @@ case "Domingo":
 	break;
 	
 }
-System.out.println("Estoy con mi ordenador de clase");
+System.out.println("Estoy con mi ordenador de clase wow");
 sc.close();
 	}
 
