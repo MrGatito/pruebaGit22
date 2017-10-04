@@ -42,6 +42,7 @@ case "Domingo":
 	break;
 	
 }
+System.out.println("Estoy con mi ordenador de clase");
 sc.close();
 	}
 
