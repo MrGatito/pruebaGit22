@@ -21,7 +21,6 @@ public class Excepciones {
 				sc=new Scanner(System.in);
 			System.out.println("ERROR 23400:El valor es una letra");
 			}
-			System.out.println("Hola buenas");
 		}
 		sc.close();
 	}
