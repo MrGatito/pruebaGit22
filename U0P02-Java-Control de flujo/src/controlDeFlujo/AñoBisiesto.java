@@ -2,7 +2,7 @@ package controlDeFlujo;
 
 import java.util.Scanner;
 
-public class AñoBisiesto {
+public class AÃ±oBisiesto {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -25,7 +25,7 @@ public class AñoBisiesto {
 			if(mes>0 && mes<=12) {
 			try {
 				sc=new Scanner(System.in);
-				System.out.println("El año es bisiesto?");
+				System.out.println("El aï¿½o es bisiesto?");
 				respuesta = sc.nextLine();
 				if(!respuesta.equalsIgnoreCase("si") && !respuesta.equalsIgnoreCase("no")) {
 					System.out.println("No es una respuesta de si o no ");
