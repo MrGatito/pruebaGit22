@@ -1,7 +1,7 @@
 **HANDS FOR EVENTS**
 
 **H4E** es una empresa dedicada a la contratación de personal de limpieza para eventos y todo tipo de celebraciones.
-
+Esto habrá que modificarlo un poco
 Es duro el hecho de trabajar más de 8 horas seguidas, llegando incluso a 15, pero a parte de el sueldo en esos tipos de eventos *puedes encontrarte una amplia gama de cosas:*
 
 1. ​	`Lo que más interesa en esos momentos es dinero líquido y la mejor forma de encontrarlo es dirigirse rápidamente a la platea en cuanto se termina un concierto.`
