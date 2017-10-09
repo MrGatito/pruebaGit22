@@ -94,12 +94,16 @@ Vamos a importar a nuestra máquina el repositorio que hemos creado. Ahora está
 - Localiza la opción en la web para descargar el proyecto como un archivo ZIP
 - Localiza la opción en la web para añadir un usuario autorizado al proyecto. Recuerda que todos los usuarios podrán verlo, pero sólo los autorizados podrán modificarlo.
 
+![14](Imagenes/EclipseyGit/14.PNG)
+
 ##### Parte 5. Clonación del repositorio en la segunda máquina
 
 La principal ventaja que tiene Git para ti es que podrás desarrollar proyectos tanto en casa como en clase de forma cómoda. Para simular este proceso vamos a trabajar ahora con la máquina clonada.
 
 1. Clona en esta máquina el repositorio remoto: para ello debes repetir los pasos de la parte 3.
-2. Importa el proyecto del repositorio. Existen dos formas de hacer esto:
+
+
+1. Importa el proyecto del repositorio. Existen dos formas de hacer esto:
   * En la misma operación de clonación puedes marcar la casilla de *Importar proyectos existentes*
   * En el explorador de proyectos de Eclipse, *botón secundario → Import → Git → Projects from Git → Clone URI*, utilizando de nuevo el identificador de nuestro repositorio.
 
@@ -107,23 +111,41 @@ La principal ventaja que tiene Git para ti es que podrás desarrollar proyectos 
 ##### Parte 6. El ciclo *Pull, Commit*, *Push*
 
 Existen multitud de guías sobre el flujo de trabajo en Git, [algunas de ellas muy sencillas](http://rogerdudler.github.io/git-guide/index.es.html). Nosotros vamos a trabajar de forma muy básica, siempre con la rama *master* y sin explorar las capacidades de trabajo en equipo de Git, que caen fuera del ámbito de este módulo profesional. Básicamente tus acciones cuando llegues a un equipo, ya sea el de casa o el de clase, serán:
-1. Hacer *Pull* para incorporar en tus proyectos locales los cambios que se puedan haber incluido en la versión de tu proyecto que está en el repositorio. 
-2. Continuar desarrollando tus proyectos en la máquina
-3. Cuando termines tu sesión de trabajo, hacer *Commit y Push* de los archivos cuyos cambios des por válidos para subirlos al repositorio remoto
+1. Hacer *Pull* para incorporar en tus proyectos locales los cambios que se puedan haber incluido en la versión de tu proyecto que está en el repositorio.
+
+
+1. Continuar desarrollando tus proyectos en la máquina
+2. Cuando termines tu sesión de trabajo, hacer *Commit y Push* de los archivos cuyos cambios des por válidos para subirlos al repositorio remoto
+
+```
+Lo he hecho correctamente.
+```
+
+
 
 A continuación haremos una prueba básica de este ciclo.
 
 1. Realiza la operación *Pull*: no se detectarán cambios porque aún no los hay.
-2. Modifica el código fuente de tu proyecto (por ejemplo añade código para escribir en pantalla la máquina con la que estás trabajando ahora)
-3. Inicia el proceso de confirmación de los cambios o *Commit* y arrastra el archivo modificado de *unstaged* a *staged changes*. Añade un mensaje para el Commit, por ejemplo *"nuevo mensaje escrito en pantalla"*
-4. Pulsa en *Commit and Push* o bien realiza ambas acciones por separado.
-5. Comprueba en la web de GitHub que el archivo ha sido actualizado
+
+![15](Imagenes/EclipseyGit/15.PNG)
+
+1. Modifica el código fuente de tu proyecto (por ejemplo añade código para escribir en pantalla la máquina con la que estás trabajando ahora)
+2. Inicia el proceso de confirmación de los cambios o *Commit* y arrastra el archivo modificado de *unstaged* a *staged changes*. Añade un mensaje para el Commit, por ejemplo *"nuevo mensaje escrito en pantalla"*
+
+![16](Imagenes/EclipseyGit/16.PNG)
+
+1. Pulsa en *Commit and Push* o bien realiza ambas acciones por separado.
+2. Comprueba en la web de GitHub que el archivo ha sido actualizado
   Ahora imaginemos que desde casa has realizado algunos cambios en el proyecto. Para simular esto, accede a la web de GitHub y, desde allí, modifica manualmente dos archivos: uno de código fuente y otro de Markdown. Observa que en GitHub sólo hace falta la operación *Commit*: no tiene sentido *Push* puesto que estás manipulando el repositorio original.
+
+![17](Imagenes/EclipseyGit/17.PNG)
 
 Siguiendo con nuestro escenario, volvemos a clase al día siguiente:
 
 1. Realiza la operación *Pull*, y verás cómo se incorporan los cambios. Tu proyecto está ahora actualizado.
 2. Accede al histórico de cambios: *clic secundario sobre el proyecto → Team → Show in History* y examina los resultados.
+
+![18](Imagenes/EclipseyGit/18.PNG)
 
 **Nota importante: detección de errores**
 
@@ -137,24 +159,61 @@ El objetivo de esta parte es que comprendas que el plugin de Git para Eclipse es
 
 1. Accede a [la web de GitLab](https://gitlab.com/)
 2. Crea una nueva cuenta, a ser posible utilizando el mismo nombre de usuario que en GitHub para evitar confusiones
+  ![19](Imagenes/EclipseyGit/19.PNG)
 3. Una vez creada la cuenta, crea un nuevo repositorio privado llamado  **dwesXX-gitlab** donde XX sea tu número de equipo.
+  ![20](Imagenes/EclipseyGit/20.PNG)
 4. Crea un nuevo archivo *README* y comprueba que GitLab también utiliza MarkDown como lenguaje de documentación y permite la edición y previsualización de documentos.
+  ![21](Imagenes/EclipseyGit/21.PNG)
 5. En Eclipse, carga (Load) la clave SSH que generamos y almacenamos en la carpeta de repositorios: no crees una nueva. Vamos a reutilizar la misma para comunicarnos con GitLab. Cópiala al portapapeles
-6. Localiza ahora en la web la sección para añadir una clave SSH y añádela
-7. Ahora localiza en la web el identificador que nos permitirá clonar el repositorio por SSH
-8. Desde la vista de Git Repositories de Eclipse, clona el repositorio introduciendo el identificador en el campo URI del asistente. Escoge protocolo "SSH"
-9. Observa que ahora conviven en Eclipse dos repositorios de dos proveedores diferentes, sin que el uno interfiera en el otro (siempre que los proyectos que haya en uno y otro sean diferentes)
-10. Crea un nuevo proyecto Java de prueba y realiza el proceso para subirlo al repositorio GitLab:
+```
+git@github.com:MrGatito/pruebaGit22.git
+```
+
+
+
+1. Localiza ahora en la web la sección para añadir una clave SSH y añádela
+  ![22](Imagenes/EclipseyGit/22.PNG)
+2. Ahora localiza en la web el identificador que nos permitirá clonar el repositorio por SSH
+
+
+1. Desde la vista de Git Repositories de Eclipse, clona el repositorio introduciendo el identificador en el campo URI del asistente. Escoge protocolo "SSH"
+  ![23](Imagenes/EclipseyGit/23.PNG)
+
+2. Observa que ahora conviven en Eclipse dos repositorios de dos proveedores diferentes, sin que el uno interfiera en el otro (siempre que los proyectos que haya en uno y otro sean diferentes)
+
+3. Crea un nuevo proyecto Java de prueba y realiza el proceso para subirlo al repositorio GitLab:
+
   * Compartir el proyecto (Share project)
+
+    ![26](Imagenes/EclipseyGit/26.PNG)
+
   * Commit (seleccionar todos los archivos y arrastrarlos a *staged changes*)
+
   * Push
-11. Comprueba que ha aparecido en la web
-12. Localiza la opción en la web de GitLab para descargar el proyecto como un archivo ZIP
-13. Localiza la opción en la web de GitLab para añadir un miembro autorizado a nuestro proyecto
-14. ¿Observas alguna diferencia de funcionamiento entre los proyectos de GitHub y GitLab?
+
+  ![27](Imagenes/EclipseyGit/27.PNG)
+
+4. Comprueba que ha aparecido en la web
+  ![28](Imagenes/EclipseyGit/28.PNG)
+
+5. Localiza la opción en la web de GitLab para descargar el proyecto como un archivo ZIP
+6. Localiza la opción en la web de GitLab para añadir un miembro autorizado a nuestro proyecto
+7. ¿Observas alguna diferencia de funcionamiento entre los proyectos de GitHub y GitLab?
+```
+Ninguna, la verdad.
+```
+
+
+
 ##### Parte 8. Resumen y trabajo en casa
 
 Para trabajar con Git en una máquina nueva tenemos que hacer lo siguiente:
+
+```
+Esto no lo hago porque lo estoy haciendo con el pc de casa.
+```
+
+
 
 1. Instalar el plugin de Git en Eclipse. Se recomienda activar también la barra de herramientas de Git.
 

@@ -631,14 +631,194 @@ case 3:
 
 - *Enunciado*:
 
+```
+Haz una tabla de 10x10 con numeros enteros entre 1 y 9 de forma aleatoria.
+Visualizar la suma de las filas y columnas.
+```
+
 - *Código de la solución*
 
+```java
+package controlDeFlujo;
+
+public class Opcional1 {
+	public static void main(String[] args) {
+//Haz una tabla de 10x10 con numeros enteros entre 1 y 9 de forma aleatoria.
+//Visualizar la suma de las filas y columnas.
+
+		int filas = 0;
+		int columnas = 0;
+		int[][] matriz = new int[10][10];
+		int i = 0, j;
+		while (i < matriz.length) {
+			j = 0;
+			while (j < matriz[i].length) {
+				matriz[i][j] = (int) (Math.random() * 9 + 1);
+				j += 1;
+			}
+			i += 1;
+		}
+
+		i = 0;
+		while (i < matriz.length) {
+			j = 0;
+			System.out.println();
+			while (j < matriz[i].length) {
+				filas += matriz[i][j];
+				j += 1;
+
+			}
+			System.out.println("La suma de la fila " + (i + 1) + " es " + filas);
+			filas = 0;
+			i += 1;
+
+		}
+
+		System.out.println();
+			i=0;
+		while (i < matriz.length) {
+			j=0;
+			System.out.println();
+			while (j < matriz[i].length) {
+				columnas += matriz[j][i];
+				j += 1;
+
+			}
+			System.out.println("La suma de la columna " + (i + 1) + " es " + columnas);
+			columnas = 0;
+			i += 1;
+
+		}
+
+	}
+
+}
+```
+
 - *Ejecución*:
+
+```
+La suma de la fila 1 es 54
+
+La suma de la fila 2 es 37
+
+La suma de la fila 3 es 38
+
+La suma de la fila 4 es 48
+
+La suma de la fila 5 es 53
+
+La suma de la fila 6 es 39
+
+La suma de la fila 7 es 42
+
+La suma de la fila 8 es 56
+
+La suma de la fila 9 es 55
+
+La suma de la fila 10 es 30
+
+
+La suma de la columna 1 es 48
+
+La suma de la columna 2 es 44
+
+La suma de la columna 3 es 54
+
+La suma de la columna 4 es 36
+
+La suma de la columna 5 es 46
+
+La suma de la columna 6 es 50
+
+La suma de la columna 7 es 51
+
+La suma de la columna 8 es 50
+
+La suma de la columna 9 es 31
+
+La suma de la columna 10 es 42
+
+
+```
+
+
 
 10) (opcional) Resuelve el problema que tu compañer@ plantee.
 
 - *Enunciado de tu compañer@:*
 
+```
+ Dada una cadena por teclado, decidir si es palíndroma, es decir si se lee igual de izquierda a derecha que de derecha a izquierda.
+```
+
 - *Código de la solución*
 
+```java
+public static void main(String[] args) {
+		// Dada una cadena por teclado, decidir si es palíndroma, es decir si
+		// se lee igual de izquierda a derecha que de derecha a izquierda.
+		Scanner sc = new Scanner(System.in);
+		String cadena;
+		System.out.println("Introduce el posible palindromo.");
+		cadena = sc.nextLine().toLowerCase();
+		cadena = espaciosFuera(cadena);
+
+		String cadenaAux = "";
+		for (int i = cadena.length() - 1; i >= 0; i--) {
+			cadenaAux += cadena.charAt(i);
+		}
+		if (cadena.compareToIgnoreCase(cadenaAux) == 0)
+			System.out.println("Es una cadena palindroma.");
+		else
+			System.out.println("La cadena no era palindroma.");
+	}
+
+	static public String espaciosFuera(String cadena) {
+		int esp = -1, aux = -1, c = 0;
+		String cadenaAux = cadena;
+		for (int i = 0; i < cadena.length() && esp == -1; i++) {
+			c += 1;
+			if (cadena.charAt(i) == ' ') {
+				esp = i;
+				aux = i;
+				cadenaAux = cadena.substring(0, i);
+				break;
+			}
+		}
+		do {
+			esp = -1;
+			for (int i = aux + 1; i < cadena.length() && esp == -1; i++) {
+				c += 1;
+				if (cadena.charAt(i) == ' ') {
+					esp = i;
+					cadenaAux += cadena.substring(aux + 1, i);
+					aux = i;
+					break;
+				}
+				if (cadena.charAt(i) != ' ' && i == (cadena.length() - 1) && cadena != cadenaAux) {
+					cadenaAux += cadena.substring(aux + 1, c);
+					break;
+				}
+			}
+		} while (c < cadena.length());
+		return cadenaAux;
+	}
+
+
+}
+
+```
+
+
+
 - *Ejecución*:
+
+```
+Introduce el posible palindromo.
+2332
+Es una cadena palindroma.
+
+
+```
+
